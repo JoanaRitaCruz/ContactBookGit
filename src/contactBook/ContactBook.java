@@ -73,6 +73,20 @@ public class ContactBook {
         return result;
     }
 
+    public boolean equalPhones(int number) {
+        int i = 0;
+        int original = searchByNumber(number);
+        while(i<counter){
+            if(i == original)
+                i++;
+            else if(contacts[i].getPhone() == number)
+                return true;
+            else
+                i++;
+        }
+        return false;
+    }
+
     private void resize() {
         Contact tmp[] = new Contact[2*contacts.length];
         for (int i=0;i<counter; i++)
@@ -91,6 +105,19 @@ public class ContactBook {
     //Pre: hasNext()
     public Contact next() {
         return contacts[currentContact++];
+    }
+
+    private int searchByNumber(int number) {
+        int i = 0;
+        int result = -1;
+        boolean found = false;
+        while (i<counter && !found)
+            if (contacts[i].getPhone() == number)
+                found = true;
+            else
+                i++;
+        if (found) result = i;
+        return result;
     }
 
 }
