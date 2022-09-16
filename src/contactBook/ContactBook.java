@@ -73,7 +73,7 @@ public class ContactBook {
         return result;
     }
 
-    public int searchIndexPhone(int phone) {
+    private int searchIndexPhone(int phone) {
         int i = 0;
         int result = -1;
         boolean found = false;
@@ -84,6 +84,14 @@ public class ContactBook {
                 i++;
         if (found) result = i;
         return result;
+    }
+
+    public boolean hasPhone(int phone) {
+        return searchIndexPhone(phone) >= 0;
+    }
+
+    public String getContactByPhone(int phone){
+        return contacts[searchIndexPhone(phone)].getName();
     }
 
     private void resize() {
