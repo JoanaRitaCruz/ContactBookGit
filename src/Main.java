@@ -91,7 +91,7 @@ public class Main {
         int input;
 
         input = in.nextInt();
-        if(!cBook.hasPhone())
+        if(!cBook.hasPhone(input))
             System.out.println(PHONE_NOT_EXIST);
         else{
             System.out.println(cBook.getContactByPhone(input));
