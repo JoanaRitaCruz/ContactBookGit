@@ -88,6 +88,7 @@ public class Main {
         int input;
 
         input = in.nextInt();
+        in.nextLine();
         if(!cBook.hasPhone(input))
             System.out.println(PHONE_NOT_EXIST);
         else{

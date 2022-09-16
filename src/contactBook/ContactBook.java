@@ -89,7 +89,6 @@ public class ContactBook {
     public boolean equalPhones() {
         int i = 0;
         for(int j = 0; j<counter; j++) {
-            number = contacts[j]
             while (i < counter) {
                 if (i == j)
                     i++;
