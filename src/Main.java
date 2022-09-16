@@ -78,7 +78,6 @@ public class Main {
     }
 
     private static void areEqualPhones(Scanner in, ContactBook cBook) {
-
         if(cBook.equalPhones())
             System.out.println(SHARE_PHONES);
         else
