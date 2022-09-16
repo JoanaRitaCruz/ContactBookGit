@@ -86,16 +86,19 @@ public class ContactBook {
         return result;
     }
 
-    public boolean equalPhones(int number) {
+    public boolean equalPhones() {
         int i = 0;
-        int original = searchIndexPhone(number);
-        while(i<counter){
-            if(i == original)
-                i++;
-            else if(contacts[i].getPhone() == number)
-                return true;
-            else
-                i++;
+        for(int j = 0; j<counter; j++) {
+            number = contacts[j]
+            while (i < counter) {
+                if (i == j)
+                    i++;
+                else if (contacts[i].getPhone() == contacts[j].getPhone())
+                    return true;
+                else
+                    i++;
+            }
+            i = 0;
         }
         return false;
     }
