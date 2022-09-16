@@ -86,6 +86,20 @@ public class ContactBook {
         return result;
     }
 
+    public boolean equalPhones(int number) {
+        int i = 0;
+        int original = searchByNumber(number);
+        while(i<counter){
+            if(i == original)
+                i++;
+            else if(contacts[i].getPhone() == number)
+                return true;
+            else
+                i++;
+        }
+        return false;
+    }
+
     public boolean hasPhone(int phone) {
         return searchIndexPhone(phone) >= 0;
     }
