@@ -88,7 +88,7 @@ public class ContactBook {
 
     public boolean equalPhones(int number) {
         int i = 0;
-        int original = searchByNumber(number);
+        int original = searchIndexPhone(number);
         while(i<counter){
             if(i == original)
                 i++;
